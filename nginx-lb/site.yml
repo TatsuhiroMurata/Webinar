@@ -1,0 +1,7 @@
+---
+- hosts: lb
+  name: Ansible for NGINX LB Install role 
+  become: yes
+
+  roles:
+    - nginx-lb

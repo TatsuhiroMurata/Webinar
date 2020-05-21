@@ -1,0 +1,6 @@
+---
+- name: launch roles
+  hosts: webserver
+  roles:
+    - role1
+    - role2

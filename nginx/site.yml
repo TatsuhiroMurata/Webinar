@@ -1,0 +1,7 @@
+---
+- hosts: webserver
+  name: Ansible for NGINX Install role 
+  become: yes
+
+  roles:
+    - nginx

@@ -1,7 +1,7 @@
 ---
   - name: return from shell
-      command: id
-      register: username_result
-    - name: show result
-      debug:
-        var: username_result
+    command: cut --delimiter=':' --fields=1 /etc/passwd
+    register: username_result
+  - name: show result
+    debug:
+      var: username_result

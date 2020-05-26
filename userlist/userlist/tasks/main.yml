@@ -1,4 +1,8 @@
 ---
-  - name: Install EPAL
-    debug:
-      shell: "id"
+  - name: return from shell
+      shell: id
+      register: return_from_shell
+      changed_when: no
+    - name: show previous shell stdout
+      debug:
+        msg: "{{ return_from_shell.stdout }}"

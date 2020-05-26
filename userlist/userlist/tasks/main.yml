@@ -1,8 +1,7 @@
 ---
   - name: return from shell
-      shell: id
-      register: return_from_shell
-      changed_when: no
-    - name: show previous shell stdout
+      command: id
+      register: username_result
+    - name: show result
       debug:
-        msg: "{{ return_from_shell.stdout }}"
+        var: username_result

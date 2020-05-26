@@ -1,0 +1,6 @@
+---
+  - name: useradd loop sequence
+    user:
+      name: "{{ item }}"
+      password: "{{ '11223344' | password_hash('sha512') }}"
+    with_sequence: start=0 end={{ quantity }} stride=1 format={{ username }}%03g

@@ -1,0 +1,15 @@
+[all:vars]
+ansible_user=centos
+ansible_ssh_private_key_file=/home/centos/.ssh/ansible.pem
+ansible_port=22
+
+[webserver]
+node1 ansible_host=18.179.41.60
+node2 ansible_host=18.181.170.6
+node3 ansible_host=13.112.155.121
+
+[lb]
+lb1 ansible_host=18.181.166.64
+
+[control]
+ansible ansible_host=54.238.172.53
